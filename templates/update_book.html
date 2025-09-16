@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Book</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Update Book</h2>
+    <form action="/update_data" method="POST">
+        <input type="hidden" name="id" value="{{ data[0] }}">
+        <input type="text" name="title" value="{{ data[1] }}" required>
+        <input type="text" name="author" value="{{ data[2] }}">
+        <input type="text" name="genre" value="{{ data[3] }}">
+        <input type="number" name="year" value="{{ data[4] }}">
+        <button type="submit">Update</button>
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

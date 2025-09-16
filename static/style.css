@@ -1,0 +1,111 @@
+/* === General Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #611e72, #2a9873, #098488, #e9da06);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: #03dda6;
+    text-align: center;
+    min-height: 100vh;
+}
+s
+h2 {
+    margin-top: 40px;
+    color: #0a81b8;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* === Form === */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(30, 177, 214, 0.2);
+}
+
+input, button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input {
+    background: #03dcec;
+    color: #333;
+}
+
+button {
+    background-color: #ff9800;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #d684bd;
+}
+
+/* === Table === */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+th, td {
+    padding: 12px 20px;
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+    input, button {
+        width: 90%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
+
+/* === Animated Background === */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Fade-in effect from JS */
+body {
+    opacity: 0; /* JS sets to 1 on load */
+    transition: opacity 1.5s ease;
+}
+
+/* Button click animation */
+button.clicked {
+    transform: scale(0.95);
+    background-color: #c2185b !important;
+    transition: all 0.2s ease;
+}
